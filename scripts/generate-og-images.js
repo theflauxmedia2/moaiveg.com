@@ -177,7 +177,6 @@ async function makeOg({
     .jpeg({ quality: 92, chromaSubsampling: "4:4:4" })
     .toFile(outPath);
 
-  // eslint-disable-next-line no-console
   console.log(`Generated ${outFile}`);
 }
 
@@ -208,7 +207,6 @@ async function main() {
 }
 
 main().catch((err) => {
-  // eslint-disable-next-line no-console
   console.error(err);
   process.exit(1);
 });

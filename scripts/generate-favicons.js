@@ -30,14 +30,12 @@ async function main() {
         .resize(size, size, { fit: "contain" })
         .png({ quality: 100 })
         .toFile(outPath);
-      // eslint-disable-next-line no-console
       console.log(`Generated ${filename} (${size}x${size})`);
     }),
   );
 }
 
 main().catch((err) => {
-  // eslint-disable-next-line no-console
   console.error(err);
   process.exit(1);
 });

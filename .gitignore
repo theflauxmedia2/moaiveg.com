@@ -23,12 +23,9 @@ dist-ssr
 *.sln
 *.sw?
 
-# Environment variables
-.env
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
+# Environment variables — ignore every env file except the names-only example
+.env*
+!.env.example
 .vercel
 
 # Original uncompressed images (local backup only)

@@ -55,12 +55,13 @@ const Contact = () => {
         break;
       }
       case 'phone': {
-        if (value) {
-          const phoneRegex = /^[+]?[1-9][\d]{0,15}$/;
-          isValid = phoneRegex.test(value.replace(/\s/g, ''));
+        if (value.trim()) {
+          const digits = value.replace(/\D/g, '');
+          const allowed = /^[+]?[\d\s()-]+$/.test(value.trim());
+          isValid = allowed && digits.length >= 10 && digits.length <= 15;
           message = isValid ? '' : 'Please enter a valid phone number';
         } else {
-          isValid = true; // Phone is optional
+          isValid = true;
           message = '';
         }
         break;
@@ -133,7 +134,7 @@ const Contact = () => {
     <div className="min-h-screen bg-background">
       <SEOHead
         title="Contact MOAI Restaurant | Reservations in Jayanagar & Koramangala, Bangalore"
-        description="Contact MOAI Restaurant for reservations, group dining, corporate events, or birthday celebrations. Jayanagar: 790/43, 9th Main Rd — 08047363493. Koramangala 5th Block: 134, 17th Main Road — 080 472 82414."
+        description="Contact MOAI for reservations in Jayanagar (08047363493) and Koramangala 5th Block (080 472 82414), Bangalore."
         canonical="https://www.moaiveg.com/contact"
         breadcrumbs={[
           { name: "Home", item: "https://www.moaiveg.com/" },

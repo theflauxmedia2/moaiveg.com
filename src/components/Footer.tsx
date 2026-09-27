@@ -258,7 +258,7 @@ const Footer = () => {
           <div className="grid grid-cols-4 gap-4 max-w-md mx-auto">
             {instagramPosts.map((post) => (
               <div key={post.id} className="relative group cursor-pointer">
-                <a href={post.a} target="_blank" rel="noopener noreferrer">
+                <a href={post.a} target="_blank" rel="noopener noreferrer" aria-label="View this MOAI photo on Instagram">
                   <img 
                     src={post.image} 
                     alt="MOAI Restaurant food and ambience photo"

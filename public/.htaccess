@@ -1,6 +1,15 @@
 RewriteEngine On
 RewriteBase /
 
+# Added redirect: send the apex host to the www canonical host.
+RewriteCond %{HTTP_HOST} ^moaiveg.com$ [NC]
+RewriteRule ^ https://www.moaiveg.com%{REQUEST_URI} [R=301,L]
+
+# Added redirect: drop a trailing slash so URLs match the canonical (root stays "/").
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_URI} ^(.+)/$
+RewriteRule ^ %1 [R=301,L]
+
 # Keep direct access for real files/directories.
 RewriteCond %{REQUEST_FILENAME} -f [OR]
 RewriteCond %{REQUEST_FILENAME} -d

@@ -20,7 +20,7 @@ const LocationKoramangala = () => {
     <div className="min-h-screen bg-background">
       <SEOHead
         title="MOAI Restaurant Koramangala | Pure Veg Fine Dining in Bengaluru"
-        description="MOAI is a premium pure vegetarian fine dining restaurant at 134, 17th Main Road, Koramangala 5th Block, Bengaluru. North Indian, biryani & desserts. Open daily 12–4 PM & 6:30 PM–12 AM. Call 080 472 82414."
+        description="Pure veg fine dining at 134, 17th Main Road, Koramangala 5th Block. North Indian, biryani, and desserts. Open 12–4 PM and 6:30 PM–12 AM. Call 080 472 82414."
         canonical={canonical}
         ogType="restaurant"
         breadcrumbs={[

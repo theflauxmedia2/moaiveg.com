@@ -24,7 +24,7 @@ const Press = () => {
     <div className="min-h-screen bg-background">
       <SEOHead
         title="Press & Media | MOAI Restaurant — PR Coverage & News Features"
-        description="Read MOAI Restaurant's press coverage across ANI News, Business Standard, Tribune India, The Print, Latestly, Dailyhunt, and Devdiscourse. Stories on vegetarian fine dining and culinary innovation in Bengaluru."
+        description="MOAI press coverage on ANI News, Business Standard, Tribune India, The Print, Latestly, Dailyhunt, and Devdiscourse."
         canonical={canonical}
         breadcrumbs={[
           { name: "Home", item: "https://www.moaiveg.com/" },

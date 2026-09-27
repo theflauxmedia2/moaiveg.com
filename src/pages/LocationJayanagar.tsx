@@ -20,7 +20,7 @@ const LocationJayanagar = () => {
     <div className="min-h-screen bg-background">
       <SEOHead
         title="MOAI Restaurant Jayanagar | Pure Veg Fine Dining in Bengaluru"
-        description="MOAI is a premium pure vegetarian fine dining restaurant in Jayanagar, Bengaluru. Ideal for families, couples, birthdays, anniversaries, and corporate group dining, with vegan-friendly options available."
+        description="Pure vegetarian fine dining in Jayanagar, Bengaluru. For families, couples, birthdays, anniversaries, and corporate groups, with vegan-friendly options."
         canonical={canonical}
         ogType="restaurant"
         breadcrumbs={[

@@ -24,7 +24,7 @@ const Reservation = () => {
             </h2>
             
             <p className="text-xl mb-8 opacity-90 leading-relaxed">
-              Ready to embark on a culinary journey? Reserve your table at MOAI, a premium vegetarian fine dining experience in Jayanagar and Koramangala, Bangalore. Perfect for family lunches, romantic veg dinners, celebrations, and corporate group dining.
+              Ready to embark on a culinary journey? Reserve your table at MOAI, a premium vegetarian fine dining experience in Koramangala and Jayanagar, Bangalore. Perfect for family lunches, date nights, birthday celebrations, weekend dining, and corporate group dining.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start items-stretch sm:items-center mb-6">

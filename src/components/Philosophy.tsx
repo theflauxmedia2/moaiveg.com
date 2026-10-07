@@ -119,11 +119,13 @@ const Philosophy = () => {
                 viewport={{ once: true }}
               >
                 {[
-                  "MOAI was born from a desire to elevate vegetarian dining into an art form and be a destination for premium vegetarian dining in Bangalore. We believe in creating a serene oasis where guests can escape the everyday and connect over exceptional food.",
+                  "MOAI was born from a desire to elevate vegetarian dining into an art form and be a destination for pure vegetarian fine dining in Bangalore. We believe in creating a serene, peaceful oasis where guests can escape the everyday and connect over exceptional food.",
                   <>
                     Our philosophy is simple: source the{" "}
                     <span className="font-bold text-brand-bronze">freshest ingredients</span>,
-                    blend global techniques with familiar traditions, and present every dish with{" "}
+                    cook every dish in{" "}
+                    <span className="font-bold text-brand-bronze">cold-pressed oils</span>, blend
+                    global techniques with familiar traditions, and present every dish with{" "}
                     <span className="font-bold text-brand-bronze">creative passion</span>. It&apos;s
                     more than a meal; it&apos;s an experience designed to be shared and savoured for
                     family lunches, romantic dinners, and group dining. Now in Jayanagar and

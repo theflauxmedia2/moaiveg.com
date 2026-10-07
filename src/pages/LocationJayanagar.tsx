@@ -19,8 +19,8 @@ const LocationJayanagar = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
-        title="MOAI Restaurant Jayanagar | Pure Veg Fine Dining in Bengaluru"
-        description="MOAI is a premium pure vegetarian fine dining restaurant in Jayanagar, Bengaluru. Ideal for families, couples, birthdays, anniversaries, and corporate group dining, with vegan-friendly options available."
+        title="MOAI Jayanagar | Pure Veg Fine Dining Restaurant in Bengaluru"
+        description="MOAI Jayanagar is a premium pure veg fine dining restaurant in 4th Block, Jayanagar. Global vegetarian cuisine, pizzas and pastas, cooked in cold-pressed oils. Ideal for families, date nights, and birthdays."
         canonical={canonical}
         ogType="restaurant"
         breadcrumbs={[
@@ -36,7 +36,7 @@ const LocationJayanagar = () => {
           image: ["https://www.moaiveg.com/og-image.jpg"],
           telephone: "+918047363493",
           priceRange: "₹₹₹",
-          servesCuisine: ["Vegetarian", "Vegan", "Fine Dining", "Multi-cuisine"],
+          servesCuisine: ["Vegetarian", "Vegan", "Fine Dining", "Global", "Multi-cuisine", "Italian", "Pizza", "Pasta"],
           address: {
             "@type": "PostalAddress",
             streetAddress: "790/43, 9th Main Rd, 4th Block, Jayanagar",
@@ -75,13 +75,17 @@ const LocationJayanagar = () => {
               variants={blurUp}
             >
               MOAI Jayanagar
+              <span className="block text-2xl md:text-3xl font-medium text-muted-foreground mt-4">
+                Pure Veg Fine Dining Restaurant in Jayanagar
+              </span>
             </motion.h1>
             <motion.p
               className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed"
               variants={blurUp}
             >
-              Premium pure vegetarian fine dining in Jayanagar, Bengaluru, crafted for celebrations,
-              dates, and memorable family dining.
+              Premium vegetarian fine dining in Jayanagar, Bengaluru. Global vegetarian cuisine,
+              pizzas, and pastas, all cooked in cold-pressed oils, crafted for celebrations, date
+              nights, and memorable family dining.
             </motion.p>
           </motion.div>
         </section>
@@ -153,13 +157,44 @@ const LocationJayanagar = () => {
         <section className="py-12 bg-gradient-to-r from-primary/5 to-[#FED6AB]/5">
           <div className="container mx-auto px-6">
             <div className="max-w-4xl mx-auto text-center space-y-4">
-              <h2 className="text-4xl font-bold text-primary">Serving Bengaluru</h2>
+              <h2 className="text-4xl font-bold text-primary">Best veg restaurant in Jayanagar</h2>
               <p className="text-lg text-muted-foreground">
-                Visit MOAI for premium vegetarian fine dining in{" "}
-                <span className="font-medium text-foreground">Jayanagar</span> and{" "}
-                <span className="font-medium text-foreground">Koramangala</span> — perfect for date
-                nights, birthdays, and corporate dinners across Bengaluru.
+                Looking for the best places to eat in Jayanagar? MOAI is a premium pure veg
+                restaurant on 9th Main Road,{" "}
+                <span className="font-medium text-foreground">4th Block, Jayanagar</span>, serving
+                gourmet vegetarian food in a serene, aesthetic setting. Also visit us in{" "}
+                <a href="/locations/koramangala" className="font-medium text-primary underline-offset-2 hover:underline">
+                  Koramangala
+                </a>
+                , open till 1 AM.
               </p>
+            </div>
+            <div className="max-w-5xl mx-auto grid md:grid-cols-3 gap-8 mt-12 text-left">
+              <div className="space-y-3">
+                <h3 className="text-xl font-bold text-primary">Lunch &amp; dinner in Jayanagar</h3>
+                <p className="text-muted-foreground">
+                  Open every day for lunch (12–4 PM) and dinner (6:30–11 PM), whether it&apos;s a
+                  weekday business lunch or a relaxed weekend dinner with family.
+                </p>
+              </div>
+              <div className="space-y-3">
+                <h3 className="text-xl font-bold text-primary">Global vegetarian cuisine</h3>
+                <p className="text-muted-foreground">
+                  From vegetarian pizza and pasta to veg starters, North Indian mains, and desserts,
+                  every dish is cooked in cold-pressed oils.{" "}
+                  <a href="/menu" className="font-medium text-primary underline-offset-2 hover:underline">
+                    Explore our vegetarian menu
+                  </a>
+                  .
+                </p>
+              </div>
+              <div className="space-y-3">
+                <h3 className="text-xl font-bold text-primary">Date nights, birthdays &amp; groups</h3>
+                <p className="text-muted-foreground">
+                  A romantic restaurant in Jayanagar for couples, and a family restaurant with room
+                  for birthday celebrations and group dining.
+                </p>
+              </div>
             </div>
           </div>
         </section>

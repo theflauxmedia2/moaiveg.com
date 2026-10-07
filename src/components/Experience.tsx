@@ -14,19 +14,19 @@ const Experience = () => {
     {
       title: "A Serene Ambiance",
       description:
-        "Step into an oasis of calm. Our green-themed decor is designed to soothe the senses and provide the perfect dining experiences.",
+        "Step into an oasis of calm. Our green-themed, aesthetic decor makes MOAI a peaceful restaurant with good ambience, and one of the most Instagrammable restaurants in Bangalore.",
       image: "/ambinace/3.jpg",
     },
     {
       title: "Globally Inspired Cuisine",
       description:
-        "Our chefs travel the world through flavour, bringing you innovative vegetarian dishes that are both surprising and delightfully familiar.",
+        "Our chefs travel the world through flavour, bringing you global vegetarian cuisine, from gourmet small plates to pizzas and pastas, that is both surprising and delightfully familiar.",
       image: "/food/5.jpg",
     },
     {
       title: "Perfect for Gatherings",
       description:
-        "MOAI is a place to connect. Whether it's a quiet dinner, a birthday, an anniversary, or a corporate party, our space is designed for group dining in Bangalore.",
+        "MOAI is a place to connect. Whether it's a date night, a family dinner, a birthday celebration, or a corporate party, our space is designed for family and group dining in Bangalore.",
       image: "/ambinace/ppl.JPG",
     },
   ];
@@ -41,7 +41,7 @@ const Experience = () => {
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
             More than just a meal, MOAI offers a complete sensory journey where every
             detail has been thoughtfully crafted to create unforgettable moments for
-            couples, families, and corporate teams in Jayanagar.
+            couples, families, and corporate teams in Koramangala and Jayanagar.
           </p>
         </Reveal>
 
@@ -59,7 +59,7 @@ const Experience = () => {
                   <div className="relative h-64 overflow-hidden">
                     <motion.img
                       src={experience.image}
-                      alt={`${experience.title} at MOAI Restaurant Jayanagar`}
+                      alt={`${experience.title} at MOAI, pure veg fine dining restaurant in Bangalore`}
                       width="600"
                       height="256"
                       className="w-full h-full object-cover"

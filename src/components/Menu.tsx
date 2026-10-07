@@ -69,9 +69,10 @@ const Menu = () => {
             An Artisanal Journey
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Every dish is crafted with passion, creativity, and the finest ingredients.
-            Discover why guests call MOAI one of the best veg restaurants in Bangalore for
-            vegetarian lunch, vegetarian dinner, and vegan-friendly fine dining.
+            Every dish is crafted with passion, creativity, and the finest ingredients, and
+            cooked in cold-pressed oils. From veg starters and small plates to globally inspired
+            mains, vegetarian pizzas, pastas, and desserts, discover why guests call MOAI one of
+            the best veg restaurants in Bangalore for lunch, dinner, and vegan-friendly fine dining.
           </p>
         </Reveal>
 

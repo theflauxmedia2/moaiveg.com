@@ -3,18 +3,54 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Blank-screen guard: if a build bundle fails to load (e.g. a cached index.html after a redeploy), reload once with fresh files -->
+    <script>
+      (function () {
+        var KEY = "moai-asset-reload";
+        window.addEventListener(
+          "error",
+          function (e) {
+            var el = e.target;
+            var src = el && (el.src || el.href);
+            if (!src || src.indexOf("/assets/") === -1) return;
+            try {
+              if (sessionStorage.getItem(KEY)) return;
+              sessionStorage.setItem(KEY, "1");
+            } catch (err) {
+              return;
+            }
+            var url = new URL(location.href);
+            url.searchParams.set("r", Date.now());
+            location.replace(url.toString());
+          },
+          true
+        );
+        // Clear the flag only once the app has actually rendered, so a persistent failure can't loop.
+        window.addEventListener("load", function () {
+          setTimeout(function () {
+            var root = document.getElementById("root");
+            if (!root || !root.children.length) return;
+            try {
+              sessionStorage.removeItem(KEY);
+            } catch (err) {}
+          }, 3000);
+        });
+      })();
+    </script>
     
     <!-- Favicon set -->
-    <link rel="icon" type="image/x-icon" href="/favicon_io/favicon.ico" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon_io/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon_io/favicon-16x16.png" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/favicon_io/apple-touch-icon.png" />
-    <link rel="manifest" href="/favicon_io/site.webmanifest" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico?v=2" />
+    <link rel="shortcut icon" href="/favicon.ico?v=2" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon_io/favicon-32x32.png?v=2" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon_io/favicon-16x16.png?v=2" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon_io/apple-touch-icon.png?v=2" />
+    <link rel="manifest" href="/favicon_io/site.webmanifest?v=2" />
     
     <!-- Primary SEO -->
-    <title>MOAI Restaurant | Vegetarian Fine Dining in Jayanagar & Koramangala, Bangalore</title>
-    <meta name="description" content="MOAI is a premium pure vegetarian fine dining restaurant in Jayanagar and Koramangala 5th Block, Bangalore. Vegan-friendly, multi-cuisine artisanal dining for families, couples, birthdays, anniversaries, and corporate group dining." />
-    <meta name="keywords" content="vegetarian restaurant Bangalore, pure veg fine dining Bangalore, vegetarian fine dining Jayanagar, vegetarian restaurant Koramangala, veg fine dining Koramangala 5th Block, moai koramangala, moai bangalore, best veg restaurant Bangalore, luxury vegetarian restaurant Bangalore, vegan restaurant Bangalore, group dining Bangalore, corporate dining Bangalore, romantic veg dinner Bangalore, birthday dinner Jayanagar, birthday dinner Koramangala" />
+    <title>MOAI | Pure Veg Fine Dining Restaurant in Koramangala & Jayanagar, Bangalore</title>
+    <meta name="description" content="MOAI is a premium pure vegetarian fine dining restaurant in Koramangala and Jayanagar, Bangalore. Global vegetarian cuisine, pizzas and pastas, all cooked in cold-pressed oils. Koramangala open till 1 AM." />
+    <meta name="keywords" content="moai bangalore, moai bengaluru, moai koramangala, moai jayanagar, moai vegetarian restaurant, pure veg restaurant Bangalore, best veg restaurant Bangalore, vegetarian fine dining Bangalore, premium vegetarian restaurant Bangalore, pure veg restaurant Koramangala, best veg restaurant Koramangala, pure veg restaurant Jayanagar, best veg restaurant Jayanagar, global vegetarian cuisine Bangalore, cold pressed oil restaurant Bangalore, vegetarian pizza Bangalore, late night veg restaurant Koramangala, date night restaurant Koramangala, instagrammable restaurant Bangalore, premium dining Bangalore" />
     <meta name="author" content="MOAI Restaurant" />
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
     <link rel="canonical" href="https://www.moaiveg.com/" />
@@ -23,8 +59,8 @@
     <meta property="og:type" content="restaurant" />
     <meta property="og:url" content="https://www.moaiveg.com/" />
     <meta property="og:site_name" content="MOAI Restaurant" />
-    <meta property="og:title" content="MOAI Restaurant | Premium Veg Fine Dining in Jayanagar & Koramangala" />
-    <meta property="og:description" content="Experience pure vegetarian fine dining at MOAI, where artistry meets flavour. Now open in Jayanagar and Koramangala 5th Block. Perfect for families, couples & corporate groups in Bengaluru." />
+    <meta property="og:title" content="MOAI | Pure Veg Fine Dining in Koramangala & Jayanagar, Bangalore" />
+    <meta property="og:description" content="Premium pure vegetarian fine dining in Koramangala and Jayanagar. Global vegetarian cuisine cooked in cold-pressed oils, perfect for date nights, families, birthdays and group dining in Bengaluru." />
     <meta property="og:image" content="https://www.moaiveg.com/og-image.jpg" />
     <meta property="og:image:secure_url" content="https://www.moaiveg.com/og-image.jpg" />
     <meta property="og:image:type" content="image/jpeg" />
@@ -37,8 +73,8 @@
     <!-- Twitter / X Card -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@moai_jayanagar" />
-    <meta name="twitter:title" content="MOAI Restaurant | Vegetarian Fine Dining, Bangalore" />
-    <meta name="twitter:description" content="Experience pure vegetarian fine dining at MOAI. Now open in Jayanagar and Koramangala 5th Block. Perfect for families, couples & corporate groups in Bengaluru." />
+    <meta name="twitter:title" content="MOAI | Pure Veg Fine Dining, Bangalore" />
+    <meta name="twitter:description" content="Premium pure vegetarian fine dining in Koramangala and Jayanagar, Bengaluru. Global vegetarian cuisine cooked in cold-pressed oils. Koramangala open till 1 AM." />
     <meta name="twitter:image" content="https://www.moaiveg.com/og-image.jpg" />
     <meta name="twitter:image:alt" content="MOAI Restaurant interior and artisanal food, premium vegetarian fine dining in Bangalore" />
     
@@ -66,7 +102,7 @@
       "@type": "Restaurant",
       "name": "MOAI Restaurant",
       "alternateName": "MOAI - Redefined Vegetarian Dining",
-      "description": "Premium pure vegetarian fine dining restaurant with outlets in Jayanagar and Koramangala 5th Block, Bangalore. Offers artisanal multi-cuisine dishes for families, couples, celebrations, and corporate groups.",
+      "description": "Premium pure vegetarian fine dining restaurant with outlets in Koramangala 5th Block and Jayanagar, Bangalore. Serves global vegetarian cuisine, including pizzas and pastas, with every dish cooked in cold-pressed oils. Ideal for date nights, families, birthdays, and group dining.",
       "areaServed": [
         { "@type": "AdministrativeArea", "name": "Jayanagar" },
         { "@type": "AdministrativeArea", "name": "Koramangala" },
@@ -80,7 +116,7 @@
       ],
       "url": "https://www.moaiveg.com",
       "email": "moai.eripl@gmail.com",
-      "servesCuisine": ["Vegetarian", "Vegan", "Fine Dining", "Multi-cuisine", "Artisanal", "Continental", "Indian", "North Indian", "Biryani", "Desserts"],
+      "servesCuisine": ["Vegetarian", "Vegan", "Fine Dining", "Global", "Multi-cuisine", "Continental", "Italian", "Pizza", "Pasta", "Indian", "North Indian", "Biryani", "Desserts"],
       "priceRange": "₹₹₹",
       "currenciesAccepted": "INR",
       "paymentAccepted": "Cash, Credit Card, UPI",
@@ -88,7 +124,7 @@
       "hasMenu": {
         "@type": "Menu",
         "name": "MOAI Restaurant Menu",
-        "description": "Artisanal vegetarian fine dining menu featuring multi-cuisine dishes, fusion chats, soups, mains, beverages and desserts.",
+        "description": "Pure vegetarian fine dining menu of global cuisine: fusion chats, veg starters, soups, mains, pizzas, pastas, beverages and desserts, all cooked in cold-pressed oils.",
         "url": "https://www.moaiveg.com/menu"
       },
       "acceptsReservations": true,
@@ -172,7 +208,7 @@
               "@type": "OpeningHoursSpecification",
               "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
               "opens": "18:30",
-              "closes": "00:00"
+              "closes": "01:00"
             }
           ]
         }
@@ -207,7 +243,7 @@
           "name": "Where is MOAI in Koramangala?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "MOAI Koramangala is at 134, 17th Main Road, Koramangala 5th Block, Bengaluru 560095. Call 080 472 82414. Open daily 12–4 PM and 6:30 PM–12 midnight."
+            "text": "MOAI Koramangala is at 134, 17th Main Road, Koramangala 5th Block, Bengaluru 560095. Call 080 472 82414. Open daily 12–4 PM and 6:30 PM–1 AM."
           }
         },
         {
@@ -231,7 +267,7 @@
           "name": "What are your operating hours?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Jayanagar is open all days from 12:00 PM–4:00 PM and 6:30 PM–11:00 PM. Koramangala is open all days from 12:00 PM–4:00 PM and 6:30 PM–12:00 midnight."
+            "text": "Jayanagar is open all days from 12:00 PM–4:00 PM and 6:30 PM–11:00 PM. Koramangala is open all days from 12:00 PM–4:00 PM and 6:30 PM–1:00 AM."
           }
         },
         {
@@ -239,7 +275,7 @@
           "name": "Do you host birthdays, anniversaries, and romantic dinners?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes, MOAI is an ideal veg restaurant in Bangalore for birthdays, anniversaries, and romantic dinners. Tell us your occasion while booking and we'll help plan the experience."
+            "text": "Yes, MOAI is an ideal veg restaurant in Bangalore for birthdays, anniversaries, and date nights. Couples love our peaceful, aesthetic setting, and families and groups have room to celebrate. Tell us your occasion while booking and we'll help plan the experience."
           }
         },
         {
@@ -248,6 +284,30 @@
           "acceptedAnswer": {
             "@type": "Answer",
             "text": "Yes. MOAI is a popular option for corporate dining in Bangalore, including business lunches, corporate dinners, and office team outings in Jayanagar and Koramangala."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is MOAI open late at night?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. MOAI Koramangala is open till 1 AM every day, making it an easy choice for late night dining in Koramangala. MOAI Jayanagar is open till 11 PM."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What cooking oil does MOAI use?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Every dish at MOAI is cooked in cold-pressed oils. It is part of our approach to healthy vegetarian food that never compromises on flavour."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you serve pizza and pasta?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Our global vegetarian menu includes vegetarian pizzas and pastas alongside North Indian favourites, small plates, desserts, and artisanal beverages."
           }
         }
       ]

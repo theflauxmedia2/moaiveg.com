@@ -19,7 +19,7 @@ const FAQ = () => {
     },
     {
       question: "Where is MOAI in Koramangala?",
-      answer: "MOAI Koramangala is at 134, 17th Main Road, Koramangala 5th Block, Bengaluru 560095. Call 080 472 82414. Open daily 12–4 PM and 6:30 PM–12 midnight. Pure vegetarian dining with North Indian, biryani, and desserts."
+      answer: "MOAI Koramangala is at 134, 17th Main Road, Koramangala 5th Block, Bengaluru 560095. Call 080 472 82414. Open daily 12–4 PM and 6:30 PM–1 AM. Pure vegetarian fine dining with global cuisine, pizzas, pastas, North Indian favourites, and desserts."
     },
     {
       question: "Is MOAI a pure vegetarian restaurant?",
@@ -40,15 +40,27 @@ const FAQ = () => {
     },
     {
       question: "What are your operating hours?",
-      answer: "Jayanagar is open all days from 12:00 PM–4:00 PM and 6:30 PM–11:00 PM. Koramangala is open all days from 12:00 PM–4:00 PM and 6:30 PM–12:00 midnight."
+      answer: "Jayanagar is open all days from 12:00 PM–4:00 PM and 6:30 PM–11:00 PM. Koramangala is open all days from 12:00 PM–4:00 PM and 6:30 PM–1:00 AM."
     },
     {
       question: "Do you host birthdays, anniversaries, and romantic dinners?",
-      answer: "Yes, MOAI is a great veg restaurant in Bangalore for birthdays, anniversaries, and romantic dinners for couples. Tell us your occasion while booking and we’ll help plan the experience."
+      answer: "Yes, MOAI is a great veg restaurant in Bangalore for birthdays, anniversaries, and date nights. Couples love our peaceful, aesthetic setting, and families and groups have room to celebrate. Tell us your occasion while booking and we’ll help plan the experience."
     },
     {
-      question: "Do you support corporate dining and business lunches in Jayanagar?",
+      question: "Do you support corporate dining and business lunches?",
       answer: "Yes. We’re a popular option for corporate dining in Bangalore, including business lunches, corporate dinners, and office team outings. Contact us for group dining and corporate event requirements."
+    },
+    {
+      question: "Is MOAI open late at night?",
+      answer: "Yes. MOAI Koramangala is open till 1 AM every day, making it an easy choice for late night dining in Koramangala. MOAI Jayanagar is open till 11 PM."
+    },
+    {
+      question: "What cooking oil does MOAI use?",
+      answer: "Every dish at MOAI is cooked in cold-pressed oils. It is part of our approach to healthy vegetarian food that never compromises on flavour."
+    },
+    {
+      question: "Do you serve pizza and pasta?",
+      answer: "Yes. Our global vegetarian menu includes vegetarian pizzas and pastas alongside North Indian favourites, small plates, desserts, and artisanal beverages."
     },
     {
       question: "Do you offer catering services?",

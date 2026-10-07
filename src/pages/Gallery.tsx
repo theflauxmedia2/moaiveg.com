@@ -51,8 +51,8 @@ const Gallery = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
-        title="Gallery | MOAI Restaurant Bangalore, Ambience & Food Photography"
-        description="Explore MOAI Restaurant's gallery of artisanal vegetarian dishes, serene green-themed interiors, and luxury dining ambiance in Jayanagar and Koramangala, Bangalore."
+        title="Gallery | MOAI, Aesthetic & Instagrammable Restaurant in Bangalore"
+        description="See why MOAI is one of Bangalore's most Instagrammable restaurants: gourmet vegetarian dishes, serene green interiors, and a restaurant with great ambience in Koramangala and Jayanagar."
         canonical="https://www.moaiveg.com/gallery"
         ogImage="https://www.moaiveg.com/og-image-gallery.jpg"
         breadcrumbs={[
@@ -67,7 +67,7 @@ const Gallery = () => {
       <main id="main-content">
         <PageHero
           title="Gallery"
-          description="Immerse yourself in the visual feast of MOAI's culinary artistry. Every image tells a story of premium vegetarian dining in Bangalore with luxury ambience in Jayanagar."
+          description="Immerse yourself in the visual feast of MOAI's culinary artistry. Every image tells a story of premium vegetarian dining in Bangalore, with an aesthetic, peaceful ambience in Koramangala and Jayanagar."
         />
 
         <section className="py-8">

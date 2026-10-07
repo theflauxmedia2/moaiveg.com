@@ -5,6 +5,7 @@
  */
 import { execSync } from "node:child_process";
 import fs from "node:fs";
+import os from "node:os";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -40,9 +41,27 @@ if (missingDirs.length) {
   process.exit(1);
 }
 
+// Hostinger's File Manager extractor gives up on very large files, silently dropping
+// everything after them in the zip. Refuse to package anything over the limit.
+const MAX_FILE_MB = 2;
+const oversized = fs
+  .readdirSync(dist, { recursive: true })
+  .map((f) => path.join(dist, String(f)))
+  .filter((f) => fs.statSync(f).isFile() && fs.statSync(f).size > MAX_FILE_MB * 1024 * 1024);
+if (oversized.length) {
+  console.error(`Files over ${MAX_FILE_MB} MB (compress them before deploying):`);
+  oversized.forEach((f) => console.error("  -", path.relative(dist, f)));
+  process.exit(1);
+}
+
 if (fs.existsSync(zipPath)) fs.unlinkSync(zipPath);
 
-execSync(`cd "${dist}" && zip -r "${zipPath}" . -x "*.DS_Store"`, { stdio: "inherit" });
+// Order matters: if the host's extractor stops partway, the old index.html must still
+// be in place, so add the hashed bundles first, everything else next, and index.html last.
+const zip = (args) => execSync(`cd "${dist}" && zip -rq "${zipPath}" ${args}`, { stdio: "inherit" });
+zip(`assets .htaccess -x "*.DS_Store"`);
+zip(`. -x "*.DS_Store" "assets/*" ".htaccess" "index.html"`);
+zip(`index.html`);
 
 const zipSize = (fs.statSync(zipPath).size / 1024 / 1024).toFixed(1);
 const fileCount = fs
@@ -50,13 +69,21 @@ const fileCount = fs
   .filter((f) => !String(f).includes(".DS_Store")).length;
 
 console.log("\n✅ Created:", zipPath, `(${zipSize} MB, ${fileCount} files)`);
+
+// Always drop a fresh copy on the Desktop, replacing the previous one.
+const desktopZip = path.join(os.homedir(), "Desktop", "moaiveg-deploy.zip");
+if (fs.existsSync(path.dirname(desktopZip))) {
+  fs.rmSync(desktopZip, { force: true });
+  fs.copyFileSync(zipPath, desktopZip);
+  console.log("✅ Copied to:", desktopZip);
+}
 console.log("\nHostinger steps:");
 console.log("  1. File Manager → public_html");
 console.log("  2. Delete OLD site files (or move to a backup folder)");
 console.log("  3. Upload moaiveg-deploy.zip");
 console.log("  4. Right-click zip → Extract (extract HERE, into public_html)");
 console.log("  5. Confirm assets/ folder exists with JS + CSS inside");
-console.log("  6. Confirm folders: food/, ambinace/, lovable-uploads/, theflauxmedia/");
+console.log("  6. Confirm 9 folders: assets, ambinace, banners, favicon_io, food, icons, lovable-uploads, post, theflauxmedia");
 console.log("  7. Confirm .htaccess exists (enable “Show hidden files”)");
 console.log("  8. Delete the zip file");
 console.log("  9. Clear Hostinger cache + hard-refresh browser (Ctrl+Shift+R)");

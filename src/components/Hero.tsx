@@ -86,6 +86,13 @@ const Hero = () => {
             <motion.div className="space-y-3 lg:space-y-4" variants={staggerItem}>
               <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight">
                 <motion.span
+                  className="block text-sm sm:text-base font-medium uppercase tracking-[0.2em] text-white/85 mb-3"
+                  variants={fadeLeft}
+                  transition={{ duration: 0.85, ease: premiumEase }}
+                >
+                  Pure Veg Fine Dining in Bangalore
+                </motion.span>
+                <motion.span
                   className="block text-white"
                   variants={fadeLeft}
                   transition={{ duration: 0.85, ease: premiumEase }}
@@ -129,7 +136,8 @@ const Hero = () => {
               variants={staggerItem}
             >
               Experience pure vegetarian cuisine like never before at one of the
-              top veg restaurants in Bangalore. MOAI invites you to
+              best veg restaurants in Bangalore: global vegetarian cuisine, every
+              dish cooked in cold-pressed oils. MOAI invites you to
               <span className="text-white font-medium">
                 {" "}
                 Mingle Over Artisanal Infusion{" "}

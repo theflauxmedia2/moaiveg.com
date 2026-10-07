@@ -15,8 +15,8 @@ const Index = () => {
   return (
     <div className="min-h-screen">
       <SEOHead
-        title="MOAI Restaurant | Vegetarian Fine Dining in Jayanagar & Koramangala, Bangalore"
-        description="MOAI is a premium pure vegetarian fine dining restaurant in Jayanagar and Koramangala 5th Block, Bangalore. Artisanal multi-cuisine, vegan-friendly dining for families, couples, birthdays, anniversaries, and corporate groups."
+        title="MOAI | Pure Veg Fine Dining Restaurant in Koramangala & Jayanagar, Bangalore"
+        description="MOAI is a premium pure vegetarian fine dining restaurant in Koramangala and Jayanagar, Bangalore. Global vegetarian cuisine, pizzas and pastas, all cooked in cold-pressed oils. Koramangala open till 1 AM."
         canonical="https://www.moaiveg.com/"
         ogType="restaurant"
       />

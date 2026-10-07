@@ -185,7 +185,7 @@ const Footer = () => {
                 <p className="font-medium mb-1">Koramangala</p>
                 <div className="flex justify-between items-start text-sm">
                   <span>All Days</span>
-                  <span className="text-right">12–4 pm<br />6:30 pm–12 midnight</span>
+                  <span className="text-right">12–4 pm<br />6:30 pm–1 am</span>
                 </div>
               </div>
             </div>

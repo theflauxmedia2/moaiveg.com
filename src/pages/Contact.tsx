@@ -268,10 +268,12 @@ const Contact = () => {
                   <h3 className="text-xl font-bold text-foreground mb-4">Opening Hours</h3>
                   <div className="space-y-3 text-muted-foreground">
                     <div className="flex justify-between">
-                      <span className="font-medium">
-                        12–4 pm<br />
-                        6:30–11 pm
-                      </span>
+                      <span className="font-medium">Jayanagar</span>
+                      <span className="text-right">12–4 pm<br />6:30–11 pm</span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span className="font-medium">Koramangala</span>
+                      <span className="text-right">12–4 pm<br />6:30 pm–1 am</span>
                     </div>
                     <p className="text-sm text-muted-foreground pt-1">
                       Open all days
@@ -636,7 +638,7 @@ const Contact = () => {
                     <h4 className="font-semibold text-foreground">Hours</h4>
                     <p className="text-muted-foreground">
                       <span className="font-medium text-foreground">Jayanagar:</span> 12–4 pm · 6:30–11 pm<br />
-                      <span className="font-medium text-foreground">Koramangala:</span> 12–4 pm · 6:30 pm–12 midnight
+                      <span className="font-medium text-foreground">Koramangala:</span> 12–4 pm · 6:30 pm–1 am
                     </p>
                     <p className="text-xs text-muted-foreground mt-1">
                       Open all days

@@ -91,7 +91,7 @@ const FullMenu = () => {
         },
         {
           name: "Artisanal Pasta Carbonara",
-          description: "House-made pasta with truffle cream, organic eggs, and aged cheese",
+          description: "House-made pasta with truffle cream and aged cheese, made completely egg-free",
           price: "₹445",
           dietary: ["Vegetarian"]
         },
@@ -174,8 +174,8 @@ const FullMenu = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
-        title="Menu | MOAI Restaurant, Artisanal Vegetarian Fine Dining, Bangalore"
-        description="Discover MOAI's full vegetarian fine dining menu: artisanal chats, soups, mains, desserts, and beverages. Pure veg and vegan-friendly. Now serving Jayanagar and Koramangala 5th Block, Bangalore."
+        title="Menu | MOAI Pure Veg Restaurant: Pizza, Pasta & Global Cuisine, Bangalore"
+        description="Explore MOAI's pure vegetarian menu: veg starters, artisanal chats, mains, vegetarian pizza and pasta, desserts, and beverages, all cooked in cold-pressed oils. Koramangala & Jayanagar, Bangalore."
         canonical="https://www.moaiveg.com/menu"
         ogImage="https://www.moaiveg.com/og-image-menu.jpg"
         breadcrumbs={[
@@ -192,11 +192,12 @@ const FullMenu = () => {
       <section className="pt-24 pb-16 bg-gradient-to-b from-primary/20 to-background">
         <div className="container mx-auto px-6 text-center">
           <h1 className="text-5xl md:text-7xl font-bold text-primary mb-6 animate-royal-entrance shimmer-text">
-            Our Menu
+            Our Vegetarian Menu
           </h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed animate-fade-in">
-            Discover our complete collection of artisanal vegetarian dishes, each crafted with passion 
-            and the finest ingredients for vegetarian fine dining in Bangalore, including vegan and multi-cuisine options.
+            Discover our global vegetarian cuisine: veg starters, main courses, vegetarian pizzas and
+            pastas, and desserts, each crafted with the finest ingredients and cooked in cold-pressed
+            oils. Healthy, gourmet vegetarian food in Bangalore, with vegan options too.
           </p>
         </div>
       </section>

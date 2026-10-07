@@ -19,8 +19,8 @@ const LocationKoramangala = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
-        title="MOAI Restaurant Koramangala | Pure Veg Fine Dining in Bengaluru"
-        description="MOAI is a premium pure vegetarian fine dining restaurant at 134, 17th Main Road, Koramangala 5th Block, Bengaluru. North Indian, biryani & desserts. Open daily 12–4 PM & 6:30 PM–12 AM. Call 080 472 82414."
+        title="MOAI Koramangala | Pure Veg Fine Dining Restaurant, Open Till 1 AM"
+        description="MOAI Koramangala is a premium pure veg fine dining restaurant in Koramangala 5th Block. Global vegetarian cuisine, pizzas and pastas, cooked in cold-pressed oils. Open daily till 1 AM. Call 080 472 82414."
         canonical={canonical}
         ogType="restaurant"
         breadcrumbs={[
@@ -40,6 +40,10 @@ const LocationKoramangala = () => {
           servesCuisine: [
             "Vegetarian",
             "Vegan",
+            "Global",
+            "Italian",
+            "Pizza",
+            "Pasta",
             "North Indian",
             "Biryani",
             "Desserts",
@@ -85,7 +89,7 @@ const LocationKoramangala = () => {
                 "Sunday",
               ],
               opens: "18:30",
-              closes: "00:00",
+              closes: "01:00",
             },
           ],
           acceptsReservations: true,
@@ -125,13 +129,17 @@ const LocationKoramangala = () => {
               variants={blurUp}
             >
               MOAI Koramangala
+              <span className="block text-2xl md:text-3xl font-medium text-muted-foreground mt-4">
+                Pure Veg Fine Dining Restaurant in Koramangala
+              </span>
             </motion.h1>
             <motion.p
               className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed"
               variants={blurUp}
             >
-              Premium pure vegetarian fine dining now open in Koramangala 5th Block — North Indian,
-              biryani, and desserts, crafted for celebrations, dates, and memorable family dining.
+              Premium vegetarian fine dining in Koramangala 5th Block, open till 1 AM. Global
+              vegetarian cuisine, pizzas, pastas, and North Indian favourites, all cooked in
+              cold-pressed oils, for date nights, birthdays, and memorable family dining.
             </motion.p>
           </motion.div>
         </section>
@@ -178,7 +186,7 @@ const LocationKoramangala = () => {
                   </motion.a>
                 </div>
                 <p className="text-sm text-muted-foreground pt-4">
-                  Open daily: 12–4 PM and 6:30 PM–12 midnight.
+                  Open daily: 12–4 PM and 6:30 PM–1 AM.
                 </p>
                 <p className="text-sm text-muted-foreground">
                   Approx. ₹2,000 for two · Lunch & dinner · Indoor seating · Takeaway & delivery
@@ -206,17 +214,44 @@ const LocationKoramangala = () => {
         <section className="py-12 bg-gradient-to-r from-primary/5 to-[#FED6AB]/5">
           <div className="container mx-auto px-6">
             <div className="max-w-4xl mx-auto text-center space-y-4">
-              <h2 className="text-4xl font-bold text-primary">Best veg fine dining in Koramangala</h2>
+              <h2 className="text-4xl font-bold text-primary">Best veg restaurant in Koramangala</h2>
               <p className="text-lg text-muted-foreground">
-                Looking for premium vegetarian fine dining near{" "}
-                <span className="font-medium text-foreground">Koramangala 5th Block</span>? MOAI
-                serves North Indian favourites, biryani, and desserts in a serene setting — ideal
-                for date nights, birthdays, and corporate dinners. Also visit our flagship in{" "}
+                Looking for the best places to eat in Koramangala? MOAI is a premium pure veg
+                restaurant on 17th Main Road,{" "}
+                <span className="font-medium text-foreground">Koramangala 5th Block</span>, serving
+                gourmet vegetarian food in a serene, aesthetic setting. Also visit our flagship in{" "}
                 <a href="/locations/jayanagar" className="font-medium text-primary underline-offset-2 hover:underline">
                   Jayanagar
                 </a>
                 .
               </p>
+            </div>
+            <div className="max-w-5xl mx-auto grid md:grid-cols-3 gap-8 mt-12 text-left">
+              <div className="space-y-3">
+                <h3 className="text-xl font-bold text-primary">Late night dining, open till 1 AM</h3>
+                <p className="text-muted-foreground">
+                  One of the few late night veg restaurants in Koramangala, MOAI serves dinner
+                  every day until 1 AM, so a late meal never has to mean compromising on quality.
+                </p>
+              </div>
+              <div className="space-y-3">
+                <h3 className="text-xl font-bold text-primary">Global vegetarian cuisine</h3>
+                <p className="text-muted-foreground">
+                  From vegetarian pizza and pasta to veg starters, North Indian mains, and desserts,
+                  every dish is cooked in cold-pressed oils.{" "}
+                  <a href="/menu" className="font-medium text-primary underline-offset-2 hover:underline">
+                    Explore our vegetarian menu
+                  </a>
+                  .
+                </p>
+              </div>
+              <div className="space-y-3">
+                <h3 className="text-xl font-bold text-primary">Date nights, birthdays &amp; groups</h3>
+                <p className="text-muted-foreground">
+                  A romantic restaurant in Koramangala for couples, with room for family dinners,
+                  birthday celebrations, and group dining on weekends and weeknights alike.
+                </p>
+              </div>
             </div>
           </div>
         </section>

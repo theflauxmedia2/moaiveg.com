@@ -219,7 +219,8 @@ const Hero = () => {
             animate="visible"
             transition={{ duration: 0.95, ease: premiumEase, delay: 0.2 }}
           >
-            <div className="relative">
+            {/* WHY w-full: parent is flex justify-center, so without it the box shrinks to the unloaded video's default 300px width. */}
+            <div className="relative w-full">
               {!prefersReducedMotion && (
                 <motion.div
                   className="absolute -inset-2 lg:-inset-4 bg-gradient-to-br from-primary/20 via-accent/10 to-secondary/20 rounded-2xl lg:rounded-[3rem] blur-xl lg:blur-3xl"
@@ -233,6 +234,16 @@ const Hero = () => {
                 whileHover={prefersReducedMotion ? undefined : { scale: 1.025 }}
                 transition={softSpring}
               >
+                {/* WHY: <video poster> can't switch by screen size, so this sits behind the video until it plays. Breakpoint matches useIsMobile (768px). */}
+                <picture>
+                  <source media="(max-width: 767px)" srcSet="/ambinace/main.jpg" />
+                  <img
+                    src="/ambinace/1.jpg"
+                    alt=""
+                    aria-hidden="true"
+                    className="absolute inset-0 w-full h-full object-cover"
+                  />
+                </picture>
                 <video
                   src="/bgvd.webm"
                   autoPlay
@@ -240,8 +251,7 @@ const Hero = () => {
                   loop
                   playsInline
                   preload="metadata"
-                  poster="/banners/Desktop.jpg"
-                  className="w-full h-64 sm:h-80 lg:h-96 object-cover"
+                  className="relative w-full h-64 sm:h-80 lg:h-96 object-cover"
                   aria-hidden="true"
                   onLoadedData={(e) => {
                     const video = e.target as HTMLVideoElement;

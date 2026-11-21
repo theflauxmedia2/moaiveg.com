@@ -34,7 +34,7 @@ if (!jsFiles.length || !cssFiles.length) {
   process.exit(1);
 }
 
-const requiredDirs = ["food", "ambinace", "banners", "post", "favicon_io", "lovable-uploads", "theflauxmedia"];
+const requiredDirs = ["food", "ambinace", "post", "favicon_io", "lovable-uploads", "theflauxmedia"];
 const missingDirs = requiredDirs.filter((d) => !fs.existsSync(path.join(dist, d)));
 if (missingDirs.length) {
   console.error("Missing asset folders in dist:", missingDirs.join(", "));
@@ -83,7 +83,7 @@ console.log("  2. Delete OLD site files (or move to a backup folder)");
 console.log("  3. Upload moaiveg-deploy.zip");
 console.log("  4. Right-click zip → Extract (extract HERE, into public_html)");
 console.log("  5. Confirm assets/ folder exists with JS + CSS inside");
-console.log("  6. Confirm 9 folders: assets, ambinace, banners, favicon_io, food, icons, lovable-uploads, post, theflauxmedia");
+console.log("  6. Confirm 8 folders: assets, ambinace, favicon_io, food, icons, lovable-uploads, post, theflauxmedia");
 console.log("  7. Confirm .htaccess exists (enable “Show hidden files”)");
 console.log("  8. Delete the zip file");
 console.log("  9. Clear Hostinger cache + hard-refresh browser (Ctrl+Shift+R)");

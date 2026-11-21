@@ -575,7 +575,7 @@ const Contact = () => {
                 <h3 className="text-2xl font-bold text-primary mb-4">Location Details</h3>
                 <p className="text-muted-foreground mb-6">
                   MOAI Restaurant has two Bengaluru locations — our flagship in Jayanagar and our
-                  new outlet in Koramangala 5th Block — both easy to reach for locals and visitors.
+                  outlet in Koramangala 5th Block — both easy to reach for locals and visitors.
                 </p>
               </div>
               

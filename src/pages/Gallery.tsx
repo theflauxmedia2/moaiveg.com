@@ -143,36 +143,6 @@ const Gallery = () => {
           </div>
         </section>
 
-        <section className="py-20 bg-gradient-to-r from-primary/5 to-[#FED6AB]/5">
-          <div className="container mx-auto px-6">
-            <Reveal className="text-center mb-12">
-              <h2 className="text-4xl font-bold text-primary mb-4">Behind the Scenes</h2>
-              <p className="text-lg text-muted-foreground">
-                Take a 15-second journey through our kitchen and see how we craft our artisanal dishes
-              </p>
-            </Reveal>
-
-            <Reveal className="max-w-4xl mx-auto" delay={0.1}>
-              <motion.div whileHover={{ y: -4 }} transition={{ duration: 0.4, ease: premiumEase }}>
-                <Card className="gradient-card border-border/50 overflow-hidden">
-                  <div className="relative aspect-video bg-muted flex items-center justify-center">
-                    <motion.div
-                      animate={{ scale: [1, 1.05, 1] }}
-                      transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-                    >
-                      <svg className="w-16 h-16 text-muted-foreground mx-auto mb-4" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M8 5v14l11-7z" />
-                      </svg>
-                    </motion.div>
-                    <p className="text-muted-foreground">Video coming soon</p>
-                    <p className="text-sm text-muted-foreground mt-2">15-second kitchen walkthrough</p>
-                  </div>
-                </Card>
-              </motion.div>
-            </Reveal>
-          </div>
-        </section>
-
         <section className="py-20">
           <div className="container mx-auto px-6">
             <Reveal className="text-center mb-12">

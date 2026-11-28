@@ -1,0 +1,21 @@
+{
+  "name": "MOAI Restaurant",
+  "short_name": "MOAI",
+  "description": "Premium vegetarian fine dining in Jayanagar, Bengaluru",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#004F00",
+  "theme_color": "#004F00",
+  "icons": [
+    {
+      "src": "/favicon_io/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicon_io/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

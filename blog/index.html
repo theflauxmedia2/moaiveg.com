@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Blank-screen guard: if a build bundle fails to load (e.g. a cached index.html after a redeploy), reload once with fresh files -->
+    <script>
+      (function () {
+        var KEY = "moai-asset-reload";
+        window.addEventListener(
+          "error",
+          function (e) {
+            var el = e.target;
+            var src = el && (el.src || el.href);
+            if (!src || src.indexOf("/assets/") === -1) return;
+            try {
+              if (sessionStorage.getItem(KEY)) return;
+              sessionStorage.setItem(KEY, "1");
+            } catch (err) {
+              return;
+            }
+            var url = new URL(location.href);
+            url.searchParams.set("r", Date.now());
+            location.replace(url.toString());
+          },
+          true
+        );
+        // Clear the flag only once the app has actually rendered, so a persistent failure can't loop.
+        window.addEventListener("load", function () {
+          setTimeout(function () {
+            var root = document.getElementById("root");
+            if (!root || !root.children.length) return;
+            try {
+              sessionStorage.removeItem(KEY);
+            } catch (err) {}
+          }, 3000);
+        });
+      })();
+    </script>
+    
+    <!-- Favicon set -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico?v=2" />
+    <link rel="shortcut icon" href="/favicon.ico?v=2" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon_io/favicon-32x32.png?v=2" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon_io/favicon-16x16.png?v=2" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon_io/apple-touch-icon.png?v=2" />
+    <link rel="manifest" href="/favicon_io/site.webmanifest?v=2" />
+    
+    <!-- Primary SEO -->
+    <title>Journal | MOAI, Pure Veg Fine Dining in Bengaluru</title>
+    <meta name="description" content="Notes from MOAI's kitchens in Jayanagar and Koramangala: vegetarian food, occasions and evenings in Bengaluru." />
+    <meta name="keywords" content="moai bangalore, moai bengaluru, moai koramangala, moai jayanagar, moai vegetarian restaurant, pure veg restaurant Bangalore, best veg restaurant Bangalore, vegetarian fine dining Bangalore, premium vegetarian restaurant Bangalore, pure veg restaurant Koramangala, best veg restaurant Koramangala, pure veg restaurant Jayanagar, best veg restaurant Jayanagar, global vegetarian cuisine Bangalore, cold pressed oil restaurant Bangalore, vegetarian pizza Bangalore, late night veg restaurant Koramangala, date night restaurant Koramangala, instagrammable restaurant Bangalore, premium dining Bangalore" />
+    <meta name="author" content="MOAI Restaurant" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <link rel="canonical" href="https://www.moaiveg.com/blog/" />
+    
+    <!-- Open Graph -->
+    <meta property="og:type" content="restaurant" />
+    <meta property="og:url" content="https://www.moaiveg.com/blog/" />
+    <meta property="og:site_name" content="MOAI Restaurant" />
+    <meta property="og:title" content="Journal | MOAI, Pure Veg Fine Dining in Bengaluru" />
+    <meta property="og:description" content="Notes from MOAI's kitchens in Jayanagar and Koramangala: vegetarian food, occasions and evenings in Bengaluru." />
+    <meta property="og:image" content="https://www.moaiveg.com/og-image.jpg" />
+    <meta property="og:image:secure_url" content="https://www.moaiveg.com/og-image.jpg" />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="MOAI Restaurant, premium vegetarian fine dining in Jayanagar and Koramangala, Bangalore. Artisanal cuisine in a serene, luxury setting." />
+    <meta property="og:locale" content="en_IN" />
+    <meta property="og:locale:alternate" content="en_US" />
+    
+    <!-- Twitter / X Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@moai_jayanagar" />
+    <meta name="twitter:title" content="MOAI | Pure Veg Fine Dining, Bangalore" />
+    <meta name="twitter:description" content="Premium pure vegetarian fine dining in Koramangala and Jayanagar, Bengaluru. Global vegetarian cuisine cooked in cold-pressed oils. Koramangala open till 1 AM." />
+    <meta name="twitter:image" content="https://www.moaiveg.com/og-image.jpg" />
+    <meta name="twitter:image:alt" content="MOAI Restaurant interior and artisanal food, premium vegetarian fine dining in Bangalore" />
+    
+    <!-- Additional Browser/App Metadata -->
+    <meta name="theme-color" content="#004F00" />
+    <meta name="msapplication-TileColor" content="#004F00" />
+    <meta name="application-name" content="MOAI Restaurant" />
+    <meta name="apple-mobile-web-app-title" content="MOAI" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    
+    <!-- Font Preloading — Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+    
+    <!-- Preconnect to analytics -->
+    <link rel="preconnect" href="https://www.googletagmanager.com" />
+
+    <!-- Structured Data: Restaurant (multi-location) -->
+    <!-- FAQ Structured Data -->
+    <!-- Google Ads — DO NOT fire conversion on every page load. Remove the conversion event from here and fire it only on actual conversions. -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17708530950"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'AW-17708530950');
+      // REMOVED: gtag('event', 'conversion', ...) — do NOT fire here. Fire only on booking/contact form success.
+    </script>
+    <script type="module" crossorigin src="/assets/index-DtVEoiWw.js"></script>
+    <link rel="modulepreload" crossorigin href="/assets/vendor-DVLlr3Vf.js">
+    <link rel="modulepreload" crossorigin href="/assets/ui-BdrQGHfo.js">
+    <link rel="modulepreload" crossorigin href="/assets/motion-1SlKih0O.js">
+    <link rel="stylesheet" crossorigin href="/assets/index-NtMdKnxy.css">
+  <meta name="robots" content="noindex, follow" /></head>
+
+  <body>
+    <div id="root"><main><h1>Journal</h1><ul></ul></main></div>
+    <!-- GA events for call / WhatsApp / directions / booking taps (public/track-clicks.js; needs the GA4 tag). -->
+    <script src="/track-clicks.js" defer></script>
+  </body>
+</html>

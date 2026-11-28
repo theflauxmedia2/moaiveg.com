@@ -1,0 +1,42 @@
+# Build the static site and publish it to the `hostinger` branch, which Hostinger's Git deploy serves with
+# auto-deploy on (D-27 in theflauxmedia2/flaux-surface). Adding a post = adding content/blog/<slug>.json to main.
+# A failed build or check publishes nothing: the live site keeps the last good build.
+# Rollback: revert the commit on main (this workflow republishes), or re-run an older run of this workflow.
+# Same file on every Flaux client site; only the env block differs.
+name: deploy
+on:
+  push: { branches: [main] }
+  workflow_dispatch: {}
+permissions: { contents: write } # only to push the built files to the `hostinger` branch
+concurrency: { group: deploy, cancel-in-progress: false }
+env:
+  OUT: dist          # build output folder (Next export: out, Vite: dist)
+  BLOG_OUT: dist/blog dist/locations/*/blog # where post pages land (space-separated, globs ok), one folder per post
+jobs:
+  build:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with: { node-version: "24", cache: npm }
+      - run: npm ci --ignore-scripts --no-audit --no-fund
+      - run: npm run build
+      - name: Every post file became a page
+        run: |
+          want=$(find content/blog -maxdepth 1 -name '*.json' ! -name '_*' 2>/dev/null | wc -l)
+          got=$(find $BLOG_OUT -mindepth 1 -maxdepth 1 -type d ! -name _none 2>/dev/null | wc -l) # unquoted: several folders
+          echo "posts: $want files, $got pages"
+          test "$got" -ge "$want"
+          test -f "$OUT/index.html"
+      - name: Publish the build to the hostinger branch
+        env: { SHA: "${{ github.sha }}" }
+        run: |
+          cd "$OUT"
+          git init -q -b hostinger
+          git config user.name "deploy-bot"
+          git config user.email "deploy-bot@users.noreply.github.com"
+          git add -A
+          git commit -q -m "build ${SHA::7}"
+          git push -q -f "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git" hostinger
+          echo "published build of ${SHA::7} to hostinger"

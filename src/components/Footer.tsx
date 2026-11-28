@@ -57,8 +57,8 @@ const Footer = () => {
               <a href="/menu" className="block text-white/80 hover:text-white transition-smooth">Our Menu</a>
               <a href="/gallery" className="block text-white/80 hover:text-white transition-smooth">Gallery</a>
               <a href="/press" className="block text-white/80 hover:text-white transition-smooth">Press</a>
-              <a href="/locations/jayanagar" className="block text-white/80 hover:text-white transition-smooth">Jayanagar</a>
-              <a href="/locations/koramangala" className="block text-white/80 hover:text-white transition-smooth">Koramangala</a>
+              <a href="/locations/jayanagar/" className="block text-white/80 hover:text-white transition-smooth">Jayanagar</a>
+              <a href="/locations/koramangala/" className="block text-white/80 hover:text-white transition-smooth">Koramangala</a>
               <a href="/contact" className="block text-white/80 hover:text-white transition-smooth">Contact</a>
               <a
                 href={RESERVATION_LINKS.jayanagar}

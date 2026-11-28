@@ -7,8 +7,8 @@ import Gallery from "@/pages/Gallery";
 import FullMenu from "@/pages/FullMenu";
 import Contact from "@/pages/Contact";
 import NotFound from "@/pages/NotFound";
-import LocationJayanagar from "@/pages/LocationJayanagar";
-import LocationKoramangala from "@/pages/LocationKoramangala";
+import OutletPage from "@/pages/Outlet";
+import { BlogIndex, BlogPost } from "@/pages/Blog";
 import Press from "@/pages/Press";
 
 const AnimatedRoutes = () => {
@@ -32,11 +32,11 @@ const AnimatedRoutes = () => {
             <Route path="/menu" element={<FullMenu />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/press" element={<Press />} />
-            <Route path="/locations/jayanagar" element={<LocationJayanagar />} />
-            <Route
-              path="/locations/koramangala"
-              element={<LocationKoramangala />}
-            />
+            {/* Outlet pages + outlet posts (D-28); brand posts at /blog/. */}
+            <Route path="/locations/:outlet" element={<OutletPage />} />
+            <Route path="/locations/:outlet/blog/:slug" element={<BlogPost />} />
+            <Route path="/blog" element={<BlogIndex />} />
+            <Route path="/blog/:slug" element={<BlogPost />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </motion.div>

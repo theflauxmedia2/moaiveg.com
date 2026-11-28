@@ -591,7 +591,7 @@ const Contact = () => {
                     <p className="text-sm text-muted-foreground mt-1">
                       <a href="tel:08047363493" className="hover:text-foreground transition-smooth">08047363493</a>
                       {" · "}
-                      <a href="/locations/jayanagar" className="text-primary hover:underline">Location page</a>
+                      <a href="/locations/jayanagar/" className="text-primary hover:underline">Location page</a>
                       {" · "}
                       <a
                         href={RESERVATION_LINKS.jayanagar}
@@ -616,7 +616,7 @@ const Contact = () => {
                     <p className="text-sm text-muted-foreground mt-1">
                       <a href="tel:08047282414" className="hover:text-foreground transition-smooth">080 472 82414</a>
                       {" · "}
-                      <a href="/locations/koramangala" className="text-primary hover:underline">Location page</a>
+                      <a href="/locations/koramangala/" className="text-primary hover:underline">Location page</a>
                       {" · "}
                       <a
                         href={RESERVATION_LINKS.koramangala}

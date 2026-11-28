@@ -1,0 +1,80 @@
+{
+  "_note": "One entry per MOAI outlet (D-28). Read by src/pages/Outlet.tsx and scripts/prerender.mjs. Facts only from the live site and the Google listings; anything unconfirmed stays out.",
+  "jayanagar": {
+    "slug": "jayanagar",
+    "name": "MOAI Jayanagar",
+    "area": "Jayanagar",
+    "mood": "day",
+    "headline": "The garden room on 9th Main",
+    "lede": "Our first kitchen: a sunlit dining room behind a wall of green, serving global vegetarian food at lunch and dinner, every day.",
+    "seoTitle": "MOAI Jayanagar | Pure Veg Fine Dining on 9th Main, 4th Block, Bengaluru",
+    "seoDescription": "MOAI Jayanagar, our first restaurant: pure veg fine dining on 9th Main Road, 4th Block. Global vegetarian food cooked in cold-pressed oils. Lunch 12–4 PM, dinner 6:30–11 PM daily.",
+    "address": { "street": "790/43, 9th Main Rd, 4th Block, Jayanagar", "locality": "Bengaluru", "region": "Karnataka", "postalCode": "560011" },
+    "geo": { "lat": 12.9250322, "lng": 77.5839606 },
+    "phone": { "display": "080 4736 3493", "tel": "+918047363493" },
+    "hours": [
+      { "label": "Lunch", "opens": "12:00", "closes": "16:00", "display": "12 – 4 PM" },
+      { "label": "Dinner", "opens": "18:30", "closes": "23:00", "display": "6:30 – 11 PM" }
+    ],
+    "hoursNote": "Every day",
+    "booking": "https://widget.reservego.co/reserveOutlets/69afcde798e88d0e87a4e9a2",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Moai%20Jayanagar%2C%20790%2F43%2C%209th%20Main%20Rd%2C%204th%20Block%2C%20Jayanagar%2C%20Bengaluru%20560011",
+    "mapEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.4399!2d77.5839511!3d12.9250249!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae151bcbeb2d51:0xf4bad52596dbecf3!2sMoai%20-%20Redefined%20Vegetarian%20Dining!5e0!3m2!1sen!2sin!4v1700000000000",
+    "hero": { "src": "/ambinace/1.jpg", "width": 1600, "height": 1200, "alt": "MOAI Jayanagar's dining room: banquettes and cane chairs in front of a green garden wall with the MOAI sign" },
+    "gallery": [
+      { "src": "/ambinace/4.jpg", "width": 1600, "height": 1200, "alt": "Looking through the arch into the garden dining room at MOAI Jayanagar" },
+      { "src": "/ambinace/ppl.JPG", "width": 1600, "height": 1067, "alt": "Guests at a table at MOAI" },
+      { "src": "/food/3.jpg", "width": 1600, "height": 1067, "alt": "A plated MOAI main with grilled paneer, herbed rice and sides" }
+    ],
+    "particulars": [
+      { "title": "Lunch and dinner, every day", "text": "Open for lunch from 12 to 4 PM and dinner from 6:30 to 11 PM, from a weekday business lunch to an unhurried family dinner on the weekend." },
+      { "title": "A quiet room in a busy block", "text": "A calm, green dining room on 9th Main Road in 4th Block, set up for conversations rather than noise." },
+      { "title": "For the occasions that matter", "text": "Date nights, birthdays and family gatherings, with tables for two and room for groups." }
+    ],
+    "faqs": [
+      { "q": "What are MOAI Jayanagar's opening hours?", "a": "Every day: lunch from 12 to 4 PM and dinner from 6:30 to 11 PM." },
+      { "q": "Is MOAI Jayanagar pure vegetarian?", "a": "Yes. Everything on the menu is vegetarian, and every dish is cooked in cold-pressed oils." },
+      { "q": "How do I book a table at MOAI Jayanagar?", "a": "Book online through Reserve a table on this page, or call 080 4736 3493." },
+      { "q": "Where is MOAI Jayanagar?", "a": "790/43, 9th Main Road, 4th Block, Jayanagar, Bengaluru 560011." }
+    ]
+  },
+  "koramangala": {
+    "slug": "koramangala",
+    "name": "MOAI Koramangala",
+    "area": "Koramangala",
+    "mood": "night",
+    "headline": "The late kitchen on 17th Main",
+    "lede": "Global vegetarian food in Koramangala 5th Block, with dinner served until 1 AM every day.",
+    "seoTitle": "MOAI Koramangala | Pure Veg Fine Dining, Open Till 1 AM, 5th Block",
+    "seoDescription": "MOAI Koramangala: pure veg fine dining on 17th Main Road, 5th Block, open daily till 1 AM. Global vegetarian food cooked in cold-pressed oils, about ₹2,000 for two. Call 080 4728 2414.",
+    "address": { "street": "134, 17th Main Road, Koramangala 5th Block", "locality": "Bengaluru", "region": "Karnataka", "postalCode": "560095" },
+    "geo": { "lat": 12.9336803, "lng": 77.6218445 },
+    "phone": { "display": "080 4728 2414", "tel": "+918047282414" },
+    "hours": [
+      { "label": "Lunch", "opens": "12:00", "closes": "16:00", "display": "12 – 4 PM" },
+      { "label": "Dinner", "opens": "18:30", "closes": "01:00", "display": "6:30 PM – 1 AM" }
+    ],
+    "hoursNote": "Every day",
+    "priceForTwo": "About ₹2,000 for two",
+    "booking": "https://widget.reservego.co/reserveOutlets/6a32359314024824fad52f97",
+    "maps": "https://www.google.com/maps/search/?api=1&query=134%2C%2017th%20Main%20Road%2C%20Koramangala%205th%20Block%2C%20Bengaluru%20560095",
+    "mapEmbed": "https://www.google.com/maps?q=12.9336803,77.6218445&z=17&output=embed",
+    "hero": { "src": "/food/3.jpg", "width": 1600, "height": 1067, "alt": "A MOAI main course on a dark stone plate: grilled paneer, herbed rice, beans and chutney" },
+    "gallery": [
+      { "src": "/food/2.jpg", "width": 1600, "height": 911, "alt": "A MOAI dish plated for dinner" },
+      { "src": "/food/1.jpg", "width": 1335, "height": 1600, "alt": "A vegetarian plate from the MOAI kitchen" },
+      { "src": "/food/4.jpg", "width": 1600, "height": 1541, "alt": "Dishes from the MOAI menu" }
+    ],
+    "particulars": [
+      { "title": "Dinner until 1 AM", "text": "One of the few vegetarian kitchens in Koramangala serving a proper dinner this late, every day of the week." },
+      { "title": "Easy to plan around", "text": "Lunch from 12 to 4 PM, dinner from 6:30 PM to 1 AM, about ₹2,000 for two. Takeaway and delivery too." },
+      { "title": "Made for a night out", "text": "Date nights, birthdays and dinners with friends that run late, without settling for less." }
+    ],
+    "faqs": [
+      { "q": "Until what time is MOAI Koramangala open?", "a": "Dinner runs until 1 AM every day. Lunch is from 12 to 4 PM and dinner from 6:30 PM." },
+      { "q": "How much does dinner for two cost?", "a": "About ₹2,000 for two." },
+      { "q": "Does MOAI Koramangala do takeaway and delivery?", "a": "Yes, both." },
+      { "q": "How do I book a table at MOAI Koramangala?", "a": "Book online through Reserve a table on this page, or call 080 4728 2414." }
+    ]
+  }
+}
